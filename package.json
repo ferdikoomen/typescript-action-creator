@@ -45,7 +45,7 @@
         "eslint:fix": "eslint \"./src/**/*.ts\" --fix",
         "prettier": "prettier \"./src/**/*.ts\" --check",
         "prettier:fix": "prettier \"./src/**/*.ts\" --write",
-        "codecov": "codecov --token=66c30c23-8954-4892-bef9-fbaed0a2e42b"
+        "codecov": "codecov --token=424ec270-3e7d-48be-a509-8608e2c425ab"
     },
     "devDependencies": {
         "@babel/core": "7.8.7",

@@ -1,4 +1,4 @@
-import {createAction} from './createAction';
+import { createAction } from './createAction';
 
 describe('createAction', () => {
     it('should create action', () => {
@@ -14,7 +14,7 @@ describe('createAction', () => {
     });
 
     it('should create action with payload', () => {
-        const myAction = createAction('MY_ACTION_WITH_PAYLOAD', (foo: string, bar: number) => ({foo, bar}));
+        const myAction = createAction('MY_ACTION_WITH_PAYLOAD', (foo: string, bar: number) => ({ foo, bar }));
 
         expect(myAction.TYPE).toEqual('MY_ACTION_WITH_PAYLOAD');
 
@@ -31,7 +31,7 @@ describe('createAction', () => {
 
     it('should create action with async payload', async () => {
         const myAction = createAction('MY_ACTION_WITH_ASYNC_PAYLOAD', async (foo: string, bar: number) => {
-            return {foo, bar};
+            return { foo, bar };
         });
 
         expect(myAction.TYPE).toEqual('MY_ACTION_WITH_ASYNC_PAYLOAD');

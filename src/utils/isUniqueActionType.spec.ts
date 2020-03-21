@@ -1,4 +1,4 @@
-import {isUniqueActionType} from './isUniqueActionType';
+import { isUniqueActionType } from './isUniqueActionType';
 
 describe('isUniqueActionType', () => {
     it('should warn if name is not unique', () => {

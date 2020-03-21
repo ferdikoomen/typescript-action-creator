@@ -1,0 +1,70 @@
+{
+    "name": "typescript-action-creator",
+    "version": "0.0.1",
+    "description": "Helper that creates simple React and Redux compatible action creators that work well with Typescript.",
+    "author": "Ferdi Koomen",
+    "homepage": "https://github.com/ferdikoomen/typescript-action-creator",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ferdikoomen/typescript-action-creator.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ferdikoomen/typescript-action-creator/issues"
+    },
+    "license": "MIT",
+    "keywords": [
+        "react",
+        "redux",
+        "action",
+        "actions",
+        "typescript"
+    ],
+    "maintainers": [
+        {
+            "name": "Ferdi Koomen",
+            "email": "info@madebyferdi.com"
+        }
+    ],
+    "files": [
+        "dist/interfaces/*.d.ts",
+        "dist/utils/*.d.ts",
+        "dist/utils/*.js",
+        "dist/index.d.ts",
+        "dist/index.js"
+    ],
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "clean": "rimraf ./dist",
+        "build": "tsc",
+        "test": "jest",
+        "test:update": "jest --updateSnapshot",
+        "test:watch": "jest --watch",
+        "test:coverage": "jest --coverage",
+        "eslint": "eslint \"./src/**/*.ts\"",
+        "eslint:fix": "eslint \"./src/**/*.ts\" --fix",
+        "prettier": "prettier \"./src/**/*.ts\" --check",
+        "prettier:fix": "prettier \"./src/**/*.ts\" --write",
+        "codecov": "codecov --token=66c30c23-8954-4892-bef9-fbaed0a2e42b"
+    },
+    "devDependencies": {
+        "@babel/core": "7.8.7",
+        "@babel/preset-env": "7.8.7",
+        "@babel/preset-typescript": "7.8.3",
+        "@types/jest": "25.1.4",
+        "@types/node": "13.9.2",
+        "@typescript-eslint/eslint-plugin": "2.24.0",
+        "@typescript-eslint/parser": "2.24.0",
+        "codecov": "3.6.5",
+        "eslint": "6.8.0",
+        "eslint-config-prettier": "6.10.0",
+        "eslint-plugin-prettier": "3.1.2",
+        "eslint-plugin-simple-import-sort": "5.0.2",
+        "glob": "7.1.6",
+        "jest": "25.1.0",
+        "jest-cli": "25.1.0",
+        "prettier": "1.19.1",
+        "rimraf": "3.0.2",
+        "typescript": "3.8.3"
+    }
+}

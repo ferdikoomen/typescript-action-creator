@@ -93,15 +93,15 @@ the string type but do not want to use a hardcoded string. For instance when we 
 import { all, takeEvery } from 'redux-saga/effects';
 import { createAction } from 'typescript-action-creator';
 
-export const createItem = createAction('CREATE_ITEM');
-export const deleteItem = createAction('DELETE_ITEM');
-export const updateItem = createAction('UPDATE_ITEM');
+const createItem = createAction('CREATE_ITEM');
+const deleteItem = createAction('DELETE_ITEM');
+const updateItem = createAction('UPDATE_ITEM');
 
 function* createItemSaga() { ... }
 function* deleteItemSaga() { ... }
 function* updateItemSaga() { ... }
 
-export function* itemSaga() {
+function* itemSaga() {
     yield all([
         takeEvery(createItem.TYPE, createItemSaga),
         takeEvery(deleteItem.TYPE, deleteItemSaga),
@@ -117,11 +117,11 @@ import { Action, createAction, isActionType } from 'typescript-action-creator';
 
 import { State } from './State';
 
-export const setLoading = createAction('SET_LOADING');
-export const setProgress = createAction('SET_PROGRESS', (progress: number) => progress);
+const setLoading = createAction('SET_LOADING');
+const setProgress = createAction('SET_PROGRESS', (progress: number) => progress);
 
-export type SetLoadingAction = ReturnType<typeof setLoading>; // Action<'SET_LOADING'>
-export type SetProgressAction = ReturnType<typeof setProgress>; // Action<'SET_PROGRESS', number>
+type SetLoadingAction = ReturnType<typeof setLoading>; // Action<'SET_LOADING'>
+type SetProgressAction = ReturnType<typeof setProgress>; // Action<'SET_PROGRESS', number>
 
 const setLoadingAction = setLoading(); // { type: 'SET_LOADING' }
 const setProgressAction = setProgress(50); // { type: 'SET_PROGRESS', payload: 50 }

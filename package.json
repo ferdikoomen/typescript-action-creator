@@ -1,6 +1,6 @@
 {
     "name": "typescript-action-creator",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Helper that creates simple React and Redux compatible action creators that work well with Typescript.",
     "author": "Ferdi Koomen",
     "homepage": "https://github.com/ferdikoomen/typescript-action-creator",

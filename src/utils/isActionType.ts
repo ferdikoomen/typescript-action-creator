@@ -1,6 +1,5 @@
 import { Action } from '../interfaces/Action';
 import { ActionCreator } from '../interfaces/ActionCreator';
-import { ActionCreatorType } from '../interfaces/ActionCreatorType';
 import { ActionCreatorWithPayload } from '../interfaces/ActionCreatorWithPayload';
 
 /**
@@ -24,5 +23,5 @@ import { ActionCreatorWithPayload } from '../interfaces/ActionCreatorWithPayload
  * @param actionCreator The action creator method to check against
  */
 export function isActionType<T extends ActionCreator | ActionCreatorWithPayload<any>>(action: Action, actionCreator: T): action is ReturnType<T> {
-    return action.type == ((actionCreator as unknown) as ActionCreatorType).TYPE;
+    return action.type == actionCreator.TYPE;
 }

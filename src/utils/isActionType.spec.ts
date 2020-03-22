@@ -40,4 +40,32 @@ describe('isActionType', () => {
         expect(isActionType(action1, someAction2)).toBeFalsy();
         expect(isActionType(action2, someAction1)).toBeFalsy();
     });
+
+    it('should not match what the order is', async () => {
+        console.info = jest.fn();
+
+        const order1 = createAction('ORDER_1');
+        const order2 = createAction('ORDER_2', (foo: string, bar: number) => {
+            return { foo, bar };
+        });
+        const order3 = createAction('ORDER_3', async (foo: string, bar: number) => {
+            return { foo, bar };
+        });
+
+        const action1 = order1();
+        const action2 = order2('Douglas Adams', 42);
+        const action3 = order3('Douglas Adams', 42);
+
+        if (isActionType(action1, order1)) {
+            console.info(action1);
+        }
+        if (isActionType(action2, order2)) {
+            console.info(action2.payload);
+        }
+        if (isActionType(action3, order3)) {
+            console.info(action3.payload);
+        }
+
+        expect(console.info).toBeCalledTimes(3);
+    });
 });

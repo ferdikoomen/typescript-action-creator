@@ -1,5 +1,4 @@
 import { ActionCreator } from '../interfaces/ActionCreator';
-import { ActionCreatorType } from '../interfaces/ActionCreatorType';
 import { ActionCreatorWithPayload } from '../interfaces/ActionCreatorWithPayload';
 import { isUniqueActionType } from './isUniqueActionType';
 
@@ -19,9 +18,9 @@ import { isUniqueActionType } from './isUniqueActionType';
  *     dispatch(fetchItem('1234'));
  * </code>
  */
-export function createAction(type: string): ActionCreator & ActionCreatorType;
-export function createAction<T extends (...args: any[]) => any>(type: string, payloadCreator: T): ActionCreatorWithPayload<T> & ActionCreatorType;
-export function createAction<T extends (...args: any[]) => any>(type: string, payloadCreator?: T): ActionCreatorWithPayload<T> & ActionCreatorType {
+export function createAction<Type extends string>(type: Type): ActionCreator<Type>;
+export function createAction<Type extends string, T extends (...args: any[]) => any>(type: Type, payloadCreator: T): ActionCreatorWithPayload<Type, T>;
+export function createAction<Type extends string, T extends (...args: any[]) => any>(type: Type, payloadCreator?: T): ActionCreatorWithPayload<Type, T> {
     isUniqueActionType(type);
 
     const actionCreator = (...args: Parameters<T>) => ({
@@ -31,5 +30,5 @@ export function createAction<T extends (...args: any[]) => any>(type: string, pa
 
     return Object.assign(actionCreator, {
         TYPE: type,
-    }) as ActionCreatorWithPayload<T> & ActionCreatorType;
+    }) as ActionCreatorWithPayload<Type, T>;
 }

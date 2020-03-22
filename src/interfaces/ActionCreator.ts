@@ -1,3 +1,8 @@
 import { Action } from './Action';
 
-export type ActionCreator = () => Action;
+/** @private */
+export interface ActionCreator<Type extends string = any> {
+    readonly TYPE: Type;
+
+    (): Action<Type>;
+}

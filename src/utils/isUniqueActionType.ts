@@ -1,6 +1,7 @@
 const types: { [key: string]: boolean } = {};
 
 /**
+ * @private
  * Ensures that the created action string is unique. If you register
  * an action that is already registered it will log the problem.
  */

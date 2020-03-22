@@ -1,5 +1,5 @@
 import { Action } from './Action';
 
-export interface ActionWithPayload<Payload = any> extends Action {
+export interface ActionWithPayload<Type extends string = any, Payload = any> extends Action<Type> {
     readonly payload: Payload;
 }

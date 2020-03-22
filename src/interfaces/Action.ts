@@ -1,3 +1,3 @@
-export interface Action {
-    readonly type: string;
+export interface Action<Type extends string = any> {
+    readonly type: Type;
 }

@@ -86,29 +86,27 @@ const reducer = (state: State, action: Action) => {
 };
 ```
 
-There is one more trick that is useful when dealing with actions:
+Each action creator also exports a 'TYPE' property. This can be useful in places where you need
+the string type but do not want to use a hardcoded string. For instance when we use Redux Saga's:
 
 ```typescript
-import { takeEvery } from 'redux-saga/effects';
+import { all, takeEvery } from 'redux-saga/effects';
 import { createAction } from 'typescript-action-creator';
 
-// Create action to load an item with a certain id
-export const loadItem = createAction('LOAD_ITEM', (id: string) => ({ id }));
+export const createItem = createAction('CREATE_ITEM');
+export const deleteItem = createAction('DELETE_ITEM');
+export const updateItem = createAction('UPDATE_ITEM');
 
-// Get the 'type' of the action, based on the action creator
-type LoadItemAction = ReturnType<typeof loadItem>;
+function* createItemSaga() { ... }
+function* deleteItemSaga() { ... }
+function* updateItemSaga() { ... }
 
-function* saga(action: LoadItemAction) {
-
-    const { id } = action.payload; // Payload is typed!
-
-    // ...load the item with the given id
-}
-
-// Each generator exports a 'TYPE' property, this allows us to use the action type,
-// without the need of using hardcoded strings.
-export function* myActionSaga() {
-    yield takeEvery(loadItem.TYPE, saga);
+export function* itemSaga() {
+    yield all([
+        takeEvery(createItem.TYPE, createItemSaga),
+        takeEvery(deleteItem.TYPE, deleteItemSaga),
+        takeEvery(updateItem.TYPE, updateItemSaga),
+    ]);
 }
 ```
 

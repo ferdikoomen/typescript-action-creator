@@ -48,7 +48,7 @@
         "codecov": "codecov --token=424ec270-3e7d-48be-a509-8608e2c425ab"
     },
     "devDependencies": {
-        "@babel/core": "7.8.7",
+        "@babel/core": "7.9.6",
         "@babel/preset-env": "7.9.6",
         "@babel/preset-typescript": "7.8.3",
         "@types/jest": "25.1.4",

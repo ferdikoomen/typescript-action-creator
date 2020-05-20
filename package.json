@@ -65,6 +65,6 @@
         "jest-cli": "26.0.1",
         "prettier": "2.0.5",
         "rimraf": "3.0.2",
-        "typescript": "3.8.3"
+        "typescript": "3.9.3"
     }
 }

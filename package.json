@@ -38,7 +38,6 @@
         "clean": "rimraf ./dist",
         "build": "tsc",
         "test": "jest",
-        "test:update": "jest --updateSnapshot",
         "test:watch": "jest --watch",
         "test:coverage": "jest --coverage",
         "eslint": "eslint \"./src/**/*.ts\"",

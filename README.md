@@ -1,10 +1,11 @@
 # Typescript Action Creator
 
-[![NPM](https://badgen.net/npm/v/typescript-action-creator)](https://www.npmjs.com/package/typescript-action-creator)
-[![License](https://badgen.net/npm/license/typescript-action-creator)](https://www.npmjs.com/package/typescript-action-creator)
-[![Build Status](https://badgen.net/travis/ferdikoomen/typescript-action-creator/master)](https://travis-ci.org/ferdikoomen/typescript-action-creator)
-[![Codecov](https://codecov.io/gh/ferdikoomen/typescript-action-creator/branch/master/graph/badge.svg)](https://codecov.io/gh/ferdikoomen/typescript-action-creator)
-[![Quality](https://badgen.net/lgtm/grade/javascript/g/ferdikoomen/typescript-action-creator)](https://lgtm.com/projects/g/ferdikoomen/typescript-action-creator)
+[![NPM][npm-image]][npm-url]
+[![License][license-image]][license-url]
+[![Build Status][travis-image]][travis-url]
+[![Dependency Status][deps-image]][deps-url]
+[![Coverage][coverage-image]][coverage-url]
+[![Quality][quality-image]][quality-url]
 
 > Helper that creates simple React and Redux compatible action creators that work well with Typescript.
 
@@ -147,3 +148,16 @@ const reducer = (state: State, action: Action) => {
 };
 
 ```
+
+[npm-url]: https://npmjs.org/package/typescript-action-creator
+[npm-image]: https://img.shields.io/npm/v/typescript-action-creator.svg
+[license-url]: LICENSE
+[license-image]: http://img.shields.io/npm/l/typescript-action-creator.svg
+[travis-url]: https://travis-ci.org/ferdikoomen/typescript-action-creator
+[travis-image]: https://img.shields.io/travis/ferdikoomen/typescript-action-creator.svg
+[deps-url]: https://david-dm.org/ferdikoomen/typescript-action-creator
+[deps-image]: https://img.shields.io/david/ferdikoomen/typescript-action-creator.svg
+[coverage-url]: https://codecov.io/gh/ferdikoomen/typescript-action-creator
+[coverage-image]: https://img.shields.io/codecov/c/github/ferdikoomen/typescript-action-creator.svg
+[quality-url]: https://lgtm.com/projects/g/ferdikoomen/typescript-action-creator
+[quality-image]: https://img.shields.io/lgtm/grade/javascript/g/ferdikoomen/typescript-action-creator.svg

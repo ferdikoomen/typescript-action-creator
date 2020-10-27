@@ -8,20 +8,15 @@
         "moduleResolution": "node",
         "lib": ["es6", "dom"],
         "types": ["node", "jest"],
-        "typeRoots": ["node_modules/@types"],
         "declaration": true,
         "declarationMap": false,
         "sourceMap": false,
         "noImplicitReturns": true,
         "noImplicitThis": true,
         "noImplicitAny": true,
-        "skipLibCheck": true,
         "strict": true,
         "strictNullChecks": true,
-        "strictFunctionTypes": true,
-        "removeComments": false,
-        "importHelpers": false,
-        "forceConsistentCasingInFileNames": true
+        "strictFunctionTypes": true
     },
 
     "include": [

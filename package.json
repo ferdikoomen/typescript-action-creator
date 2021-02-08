@@ -48,7 +48,7 @@
         "prepublish": "yarn clean && yarn build"
     },
     "devDependencies": {
-        "@babel/core": "7.12.10",
+        "@babel/core": "7.12.13",
         "@babel/preset-env": "7.12.13",
         "@babel/preset-typescript": "7.12.13",
         "@types/jest": "26.0.20",

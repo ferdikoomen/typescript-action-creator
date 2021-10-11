@@ -4,6 +4,7 @@
 [![License][license-image]][license-url]
 [![Coverage][coverage-image]][coverage-url]
 [![Quality][quality-image]][quality-url]
+[![Build][build-image]][build-url]
 
 > Helper that creates simple React and Redux compatible action creators that work well with Typescript.
 
@@ -155,3 +156,5 @@ const reducer = (state: State, action: Action) => {
 [coverage-image]: https://img.shields.io/codecov/c/github/ferdikoomen/typescript-action-creator.svg
 [quality-url]: https://lgtm.com/projects/g/ferdikoomen/typescript-action-creator
 [quality-image]: https://img.shields.io/lgtm/grade/javascript/g/ferdikoomen/typescript-action-creator.svg
+[build-url]: https://circleci.com/gh/ferdikoomen/typescript-action-creator/tree/master
+[build-image]: https://circleci.com/gh/ferdikoomen/typescript-action-creator/tree/master.svg?style=svg

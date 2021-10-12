@@ -45,7 +45,7 @@
         "prettier": "prettier \"./src/**/*.ts\" --check",
         "prettier:fix": "prettier \"./src/**/*.ts\" --write",
         "codecov": "codecov --token=424ec270-3e7d-48be-a509-8608e2c425ab",
-        "prepublish": "yarn clean && yarn build"
+        "prepublish": "yarn run clean && yarn run build"
     },
     "devDependencies": {
         "@babel/core": "7.15.8",
@@ -53,10 +53,10 @@
         "@babel/preset-typescript": "7.15.0",
         "@types/jest": "27.0.2",
         "@types/node": "16.10.3",
-        "@typescript-eslint/eslint-plugin": "4.33.0",
-        "@typescript-eslint/parser": "4.33.0",
+        "@typescript-eslint/eslint-plugin": "5.0.0",
+        "@typescript-eslint/parser": "5.0.0",
         "codecov": "3.8.3",
-        "eslint": "7.32.0",
+        "eslint": "8.0.0",
         "eslint-config-prettier": "8.3.0",
         "eslint-plugin-prettier": "4.0.0",
         "eslint-plugin-simple-import-sort": "7.0.0",
@@ -66,5 +66,9 @@
         "prettier": "2.4.1",
         "rimraf": "3.0.2",
         "typescript": "4.4.3"
+    },
+    "engines": {
+        "node": ">= 16.0.0",
+        "npm": ">= 8.0.0"
     }
 }

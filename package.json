@@ -45,7 +45,7 @@
         "prettier": "prettier \"./src/**/*.ts\" --check",
         "prettier:fix": "prettier \"./src/**/*.ts\" --write",
         "codecov": "codecov --token=424ec270-3e7d-48be-a509-8608e2c425ab",
-        "prepublish": "yarn run clean && yarn run build"
+        "prepublish": "npm run clean && npm run build"
     },
     "devDependencies": {
         "@babel/core": "7.17.2",

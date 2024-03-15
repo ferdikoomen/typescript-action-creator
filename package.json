@@ -52,7 +52,7 @@
         "@babel/preset-env": "7.24.0",
         "@babel/preset-typescript": "7.23.3",
         "@types/jest": "29.5.12",
-        "@types/node": "20.11.27",
+        "@types/node": "20.11.28",
         "@typescript-eslint/eslint-plugin": "6.21.0",
         "@typescript-eslint/parser": "6.21.0",
         "codecov": "3.8.3",
